@@ -77,7 +77,8 @@ def home():
     cursor.execute("SELECT COUNT(*) FROM tasks")
     total_tasks = cursor.fetchone()[0]
 
-    
+    cursor.execute("SELECT COUNT(*) FROM student_tasks")
+    total_tasks = cursor.fetchone()[0]
 
     cursor.close()
     connection.close()
